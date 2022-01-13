@@ -1,0 +1,11 @@
+[package]
+name = "fugit-timer"
+version = "0.1.0"
+edition = "2021"
+categories = ["embedded", "hardware-support", "no-std"]
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+
+[dependencies]
+fugit = "0.3.3"
+nb = "1.0.0"
