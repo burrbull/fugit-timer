@@ -1,7 +1,7 @@
 /// Reexport `fugit`
 pub use fugit::*;
 
-/// Provides `CountDown` and `Delay` timing capabilities
+/// Provides `CountDown` timing capabilities
 pub trait Timer<const TIMER_HZ: u32> {
     /// An error that might happen during waiting
     type Error;

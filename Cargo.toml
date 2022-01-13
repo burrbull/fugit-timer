@@ -1,7 +1,8 @@
 [package]
 name = "fugit-timer"
 description = "A Count Down Timer abstaction that uses fugit time primitives"
-version = "0.1.0"
+documentation = "https://docs.rs/fugit-timer"
+version = "0.1.1"
 edition = "2021"
 categories = ["embedded", "hardware-support", "no-std"]
 license = "MIT OR Apache-2.0"
