@@ -2,7 +2,7 @@
 name = "fugit-timer"
 description = "A Count Down Timer abstaction that uses fugit time primitives"
 documentation = "https://docs.rs/fugit-timer"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 categories = ["embedded", "hardware-support", "no-std"]
 license = "MIT OR Apache-2.0"
