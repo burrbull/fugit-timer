@@ -1,5 +1,6 @@
 [package]
 name = "fugit-timer"
+description = "A Count Down Timer abstaction that uses fugit time primitives"
 version = "0.1.0"
 edition = "2021"
 categories = ["embedded", "hardware-support", "no-std"]
