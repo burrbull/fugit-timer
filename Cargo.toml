@@ -4,7 +4,9 @@ description = "A Count Down Timer abstaction that uses fugit time primitives"
 documentation = "https://docs.rs/fugit-timer"
 version = "0.1.2"
 edition = "2021"
-categories = ["embedded", "hardware-support", "no-std"]
+keywords = ["Time", "Instant", "const"]
+categories = ["date-and-time", "embedded", "hardware-support", "no-std"]
+repository = "https://github.com/burrbull/fugit-timer"
 license = "MIT OR Apache-2.0"
 readme = "README.md"
 
