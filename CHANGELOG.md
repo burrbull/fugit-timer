@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [v0.1.3] - 2022-01-23
+
+- Error: Debug restriction
+- Add blocking `Delay`
+
 ## [v0.1.2] - 2022-01-13
 
 ### Fixed

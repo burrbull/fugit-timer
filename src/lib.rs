@@ -3,10 +3,10 @@
 /// Reexport `fugit`
 pub use fugit::*;
 
-/// Provides `CountDown` timing capabilities
+/// Provides non-blocking `CountDown` timing capabilities
 pub trait Timer<const TIMER_HZ: u32> {
     /// An error that might happen during waiting
-    type Error;
+    type Error: core::fmt::Debug;
 
     /// Return current time `Instant`
     fn now(&mut self) -> TimerInstantU32<TIMER_HZ>;
@@ -23,4 +23,13 @@ pub trait Timer<const TIMER_HZ: u32> {
     /// Must return `nb::Error::WouldBlock` if timer `duration` is not yet over.
     /// Must return `OK(())` as soon as timer `duration` has expired.
     fn wait(&mut self) -> nb::Result<(), Self::Error>;
+}
+
+/// Provides blocking `Delay`
+pub trait Delay<const TIMER_HZ: u32> {
+    /// An error that might happen during waiting
+    type Error: core::fmt::Debug;
+
+    /// Wait until timer `duration` has expired.
+    fn delay(&mut self, duration: TimerDurationU32<TIMER_HZ>) -> Result<(), Self::Error>;
 }
