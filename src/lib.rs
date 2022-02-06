@@ -8,11 +8,14 @@ pub trait Timer<const TIMER_HZ: u32> {
     /// An error that might happen during waiting
     type Error: core::fmt::Debug;
 
+    /// The backing storage used for the timer. Can be either `u32` or `u64`.
+    type TimeStorage;
+
     /// Return current time `Instant`
-    fn now(&mut self) -> TimerInstantU32<TIMER_HZ>;
+    fn now(&mut self) -> Instant<Self::TimeStorage, 1, TIMER_HZ>;
 
     /// Start timer with a `duration`
-    fn start(&mut self, duration: TimerDurationU32<TIMER_HZ>) -> Result<(), Self::Error>;
+    fn start(&mut self, duration: Duration<Self::TimeStorage, 1, TIMER_HZ>) -> Result<(), Self::Error>;
 
     /// Tries to stop this timer.
     /// An error will be returned if the timer has already been canceled or was never started.
@@ -30,6 +33,9 @@ pub trait Delay<const TIMER_HZ: u32> {
     /// An error that might happen during waiting
     type Error: core::fmt::Debug;
 
+    /// The backing storage used for the timer. Can be either `u32` or `u64`.
+    type TimeStorage;
+
     /// Wait until timer `duration` has expired.
-    fn delay(&mut self, duration: TimerDurationU32<TIMER_HZ>) -> Result<(), Self::Error>;
+    fn delay(&mut self, duration: Duration<Self::TimeStorage, 1, TIMER_HZ>) -> Result<(), Self::Error>;
 }
