@@ -5,7 +5,7 @@
 
 # `fugit-timer`
 
->  A Count Down Timer abstaction that uses [`fugit`](https://crates.io/crates/fugit) `Duraction` and `Instance`
+>  A Count Down Timer abstaction that uses [`fugit`](https://crates.io/crates/fugit) `Duration` and `Instance`
 
 ## Minimum Supported Rust Version (MSRV)
 
