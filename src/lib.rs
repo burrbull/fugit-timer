@@ -4,7 +4,7 @@
 pub use fugit::*;
 
 /// Provides non-blocking `CountDown` timing capabilities
-pub trait Timer<const TIMER_HZ: u32> {
+pub trait Timer<const TIMER_HZ: u64> {
     /// An error that might happen during waiting
     type Error: core::fmt::Debug;
 
@@ -26,7 +26,7 @@ pub trait Timer<const TIMER_HZ: u32> {
 }
 
 /// Provides blocking `Delay`
-pub trait Delay<const TIMER_HZ: u32> {
+pub trait Delay<const TIMER_HZ: u64> {
     /// An error that might happen during waiting
     type Error: core::fmt::Debug;
 
